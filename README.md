@@ -8,8 +8,8 @@ App para primeiros socorros, com intuito de englobar a centralizar os serviços 
 
 ```bash
 sudo gem install cocoapods
-git clone https://github.com/alexandrehcdc/dejavi.git
-cd dejavi
+git clone https://github.com/alexandrehcdc/ajuda-me.git
+cd ajuda-me
 pod install
 ```
 
