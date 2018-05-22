@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://10101010") else { return }
         UIApplication.shared.open(number)
-        print("aqui")
+
     }
     
     override func viewDidLoad() {
@@ -33,19 +33,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print("chamou pso")
+        
         return "Tipos de emergência"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("chamou poa")
+        
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
-        cell.textLabel?.text = "boa mlk"
-        print("chamou po")
+        cell.textLabel?.text = "Emergência exemplo"
         return cell
     }
     
