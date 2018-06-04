@@ -8,6 +8,7 @@ target 'ajuda-me' do
   # Pods for ajuda-me
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'RealmSwift', '~> 3.6.0'
   target 'ajuda-meTests' do
     inherit! :search_paths
     # Pods for testing
