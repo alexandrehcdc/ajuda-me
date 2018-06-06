@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class EndpointBuilder {
+    var BASE_URL = "https://whispering-lowlands-23613.herokuapp.com"
+    
+    func withLocation() -> EndpointBuilder {
+        self.BASE_URL = BASE_URL + "/location"
+        return self
+    }
+    
+}

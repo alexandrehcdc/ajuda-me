@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import Alamofire
+
+public class Caller {
+    
+    class func get(url: String) {
+        Alamofire.request(url)
+            .responseJSON { (response) in
+                print(response)
+        }
+    }
+    
+}

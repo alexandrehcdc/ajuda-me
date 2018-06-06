@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+class HelpRequestRemoteDataSourceImpl : HelpRequestDataSource {
+    
+    func save(entity: HelpRequest) -> HelpRequest {
+        //to do
+        return HelpRequest()
+    }
+    
+    func findBy(id: String) -> HelpRequest {
+        //to do
+        return HelpRequest()
+    }
+    
+    func findAll() -> [HelpRequest] {
+        //to do
+        return [HelpRequest]()
+    }
+    
+    func destroyManyBy(ids: [String]) {
+        //to do
+    }
+    
+}

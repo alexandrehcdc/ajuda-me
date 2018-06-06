@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+class ServicePointRemoteDataSourceImpl : ServicePointDataSource {
+    
+    func save(entity: ServicePoint) -> ServicePoint {
+        //to do
+        return ServicePoint()
+    }
+    
+    func findBy(id: String) -> ServicePoint {
+        //to do
+        return ServicePoint()
+    }
+    
+    func findAll() -> [ServicePoint] {
+        //to do
+        return [ServicePoint]()
+    }
+    
+    func destroyManyBy(ids: [String]) {
+        //to do
+    }
+    
+}

@@ -17,11 +17,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         UIApplication.shared.open(number)
     }
     
+    
+    
     override func viewDidLoad() {
         mainBtn.layer.cornerRadius = 20
         mainBtn.clipsToBounds = true
         
-        
+        Caller.get(url: "https://whispering-lowlands-23613.herokuapp.com/locations")
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.

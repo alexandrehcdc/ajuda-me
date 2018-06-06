@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Parser.swift
 //  ajuda-me
 //
 //  Created by Alexandre Henrique on 6/5/18.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class Parser {
+    
+    
+}
