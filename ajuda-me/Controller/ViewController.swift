@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         UIApplication.shared.open(number)
     }
     
-    
-    
     override func viewDidLoad() {
         mainBtn.layer.cornerRadius = 20
         mainBtn.clipsToBounds = true
