@@ -7,10 +7,8 @@
 //
 
 import Foundation
-//import RealmSwift
 
-class ServicePoint: Object {
-    @objc dynamic var id = ""
+public class ServicePoint: BaseModel {
     @objc dynamic var name = ""
     @objc dynamic var geolocation = ""
     @objc dynamic var address = ""

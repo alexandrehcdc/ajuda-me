@@ -16,7 +16,15 @@
 		450A2DE920A87B93000352B8 /* ajuda_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A2DE820A87B93000352B8 /* ajuda_meUITests.swift */; };
 		451E0AEC20C5A35500DE5B04 /* ServicePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */; };
 		451E0AEE20C5A42900DE5B04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AED20C5A42900DE5B04 /* User.swift */; };
-		451E0AF020C5A48D00DE5B04 /* HelpRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEF20C5A48D00DE5B04 /* HelpRequests.swift */; };
+		451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */; };
+		45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */; };
+		45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBE20C75E7C00717BEE /* UserDataSource.swift */; };
+		45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */; };
+		45641BC520C75F0700717BEE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC420C75F0700717BEE /* BaseModel.swift */; };
+		45641BC720C7622500717BEE /* UserDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC620C7622500717BEE /* UserDataSourceImpl.swift */; };
+		45641BC920C7623200717BEE /* ServicePointDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC820C7623200717BEE /* ServicePointDataSourceImpl.swift */; };
+		45641BCB20C7623F00717BEE /* HelpRequestDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BCA20C7623F00717BEE /* HelpRequestDataSourceImpl.swift */; };
+		45641BCF20C762D600717BEE /* BaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BCE20C762D600717BEE /* BaseDataSource.swift */; };
 		64D7A788CA770CACF4001B9B /* Pods_ajuda_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6413591F2360BD4FE20AEC /* Pods_ajuda_me.framework */; };
 		778D678B1B5850C8D513F730 /* Pods_ajuda_meTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283EABBAA2F060F02DD36A34 /* Pods_ajuda_meTests.framework */; };
 		AE5A2D5DF6C19BF175708CA8 /* Pods_ajuda_meUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10AB6D3FE15E08C1F46B580 /* Pods_ajuda_meUITests.framework */; };
@@ -58,7 +66,15 @@
 		450A2DEA20A87B93000352B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePoint.swift; sourceTree = "<group>"; };
 		451E0AED20C5A42900DE5B04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		451E0AEF20C5A48D00DE5B04 /* HelpRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequests.swift; sourceTree = "<group>"; };
+		451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequest.swift; sourceTree = "<group>"; };
+		45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDataSource.swift; sourceTree = "<group>"; };
+		45641BBE20C75E7C00717BEE /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
+		45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointDataSource.swift; sourceTree = "<group>"; };
+		45641BC420C75F0700717BEE /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		45641BC620C7622500717BEE /* UserDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSourceImpl.swift; sourceTree = "<group>"; };
+		45641BC820C7623200717BEE /* ServicePointDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointDataSourceImpl.swift; sourceTree = "<group>"; };
+		45641BCA20C7623F00717BEE /* HelpRequestDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDataSourceImpl.swift; sourceTree = "<group>"; };
+		45641BCE20C762D600717BEE /* BaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
 		4C9EC77223624A27D169B0B0 /* Pods-ajuda-meTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-meTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-meTests/Pods-ajuda-meTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66AD172892B3CA74D8126538 /* Pods-ajuda-me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B6CE8C7A40D9E98D8A64BC /* Pods-ajuda-me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,12 +168,68 @@
 			path = "ajuda-meUITests";
 			sourceTree = "<group>";
 		};
+		45641BBA20C75DFE00717BEE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				45641BC320C75EDF00717BEE /* RealmObject */,
+				451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */,
+				451E0AED20C5A42900DE5B04 /* User.swift */,
+				451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		45641BBB20C75E2500717BEE /* Persistable */ = {
+			isa = PBXGroup;
+			children = (
+				45641BC220C75ECD00717BEE /* Inheritable */,
+				45641BC620C7622500717BEE /* UserDataSourceImpl.swift */,
+				45641BC820C7623200717BEE /* ServicePointDataSourceImpl.swift */,
+				45641BCA20C7623F00717BEE /* HelpRequestDataSourceImpl.swift */,
+			);
+			path = Persistable;
+			sourceTree = "<group>";
+		};
+		45641BC220C75ECD00717BEE /* Inheritable */ = {
+			isa = PBXGroup;
+			children = (
+				45641BCD20C762C400717BEE /* Template */,
+				45641BCC20C762B800717BEE /* Protocol */,
+			);
+			path = Inheritable;
+			sourceTree = "<group>";
+		};
+		45641BC320C75EDF00717BEE /* RealmObject */ = {
+			isa = PBXGroup;
+			children = (
+				45641BC420C75F0700717BEE /* BaseModel.swift */,
+			);
+			path = RealmObject;
+			sourceTree = "<group>";
+		};
+		45641BCC20C762B800717BEE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */,
+				45641BBE20C75E7C00717BEE /* UserDataSource.swift */,
+				45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		45641BCD20C762C400717BEE /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				45641BCE20C762D600717BEE /* BaseDataSource.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
 		45D013B820B0ADB400C79285 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */,
-				451E0AED20C5A42900DE5B04 /* User.swift */,
-				451E0AEF20C5A48D00DE5B04 /* HelpRequests.swift */,
+				45641BBB20C75E2500717BEE /* Persistable */,
+				45641BBA20C75DFE00717BEE /* Entities */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,9 +431,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,11 +467,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,11 +589,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45641BC520C75F0700717BEE /* BaseModel.swift in Sources */,
+				45641BCB20C7623F00717BEE /* HelpRequestDataSourceImpl.swift in Sources */,
 				451E0AEE20C5A42900DE5B04 /* User.swift in Sources */,
 				450A2DCB20A87B93000352B8 /* ViewController.swift in Sources */,
 				450A2DC920A87B93000352B8 /* AppDelegate.swift in Sources */,
-				451E0AF020C5A48D00DE5B04 /* HelpRequests.swift in Sources */,
+				45641BC920C7623200717BEE /* ServicePointDataSourceImpl.swift in Sources */,
+				451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */,
+				45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */,
+				45641BCF20C762D600717BEE /* BaseDataSource.swift in Sources */,
+				45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */,
 				451E0AEC20C5A35500DE5B04 /* ServicePoint.swift in Sources */,
+				45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */,
+				45641BC720C7622500717BEE /* UserDataSourceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,11 @@
 //
 
 import Foundation
-//import RealmSwift
 
-class User: Object {
-    @objc dynamic var id = ""
+public class User: BaseModel {
+    
     @objc dynamic var name = ""
     @objc dynamic var password = ""
     @objc dynamic var email = ""
+    
 }

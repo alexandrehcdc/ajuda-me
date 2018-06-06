@@ -7,11 +7,10 @@
 //
 
 import Foundation
-//import RealmSwift
 
-class HelpRequests: Object {
-    @objc dynamic var id = ""
+public class HelpRequest: BaseModel {
     @objc dynamic var callerId = ""
     @objc dynamic var serviceId = ""
+    @objc dynamic var callerLocation = ""
     @objc dynamic var email = ""
 }
