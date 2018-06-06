@@ -180,17 +180,20 @@
         <!--View Controller-->
         <scene sceneID="ON3-NS-kSs">
             <objects>
-                <viewController id="eWE-HF-on5" sceneMemberID="viewController">
+                <viewController id="eWE-HF-on5" customClass="ViewController" customModule="ajuda_me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3B-ty-oad">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="TyL-nd-o7s"/>
                     </view>
+                    <connections>
+                        <outlet property="mapsView" destination="L3B-ty-oad" id="Ew2-oO-piF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyr-no-pD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="118"/>
+            <point key="canvasLocation" x="1688.8" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>

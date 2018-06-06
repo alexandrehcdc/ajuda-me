@@ -33,6 +33,7 @@
 		45641BDD20C7725D00717BEE /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BDC20C7725D00717BEE /* EndpointBuilder.swift */; };
 		45641BE020C77B8000717BEE /* GoogleMapsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BDF20C77B8000717BEE /* GoogleMapsInitializer.swift */; };
 		45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE220C7801400717BEE /* BusinessMethods.swift */; };
+		45641BE520C839A700717BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE420C839A700717BEE /* Button.swift */; };
 		64D7A788CA770CACF4001B9B /* Pods_ajuda_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6413591F2360BD4FE20AEC /* Pods_ajuda_me.framework */; };
 		778D678B1B5850C8D513F730 /* Pods_ajuda_meTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283EABBAA2F060F02DD36A34 /* Pods_ajuda_meTests.framework */; };
 		AE5A2D5DF6C19BF175708CA8 /* Pods_ajuda_meUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10AB6D3FE15E08C1F46B580 /* Pods_ajuda_meUITests.framework */; };
@@ -91,6 +92,7 @@
 		45641BDC20C7725D00717BEE /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
 		45641BDF20C77B8000717BEE /* GoogleMapsInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsInitializer.swift; sourceTree = "<group>"; };
 		45641BE220C7801400717BEE /* BusinessMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMethods.swift; sourceTree = "<group>"; };
+		45641BE420C839A700717BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4C9EC77223624A27D169B0B0 /* Pods-ajuda-meTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-meTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-meTests/Pods-ajuda-meTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66AD172892B3CA74D8126538 /* Pods-ajuda-me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B6CE8C7A40D9E98D8A64BC /* Pods-ajuda-me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +160,6 @@
 				45D013B920B0ADBA00C79285 /* Network */,
 				45D013B820B0ADB400C79285 /* Model */,
 				450A2DC820A87B93000352B8 /* AppDelegate.swift */,
-				450A2DCC20A87B93000352B8 /* Main.storyboard */,
 				450A2DCF20A87B93000352B8 /* Assets.xcassets */,
 				450A2DD120A87B93000352B8 /* LaunchScreen.storyboard */,
 				450A2DD420A87B93000352B8 /* Info.plist */,
@@ -291,7 +292,8 @@
 		45D013BA20B0ADC000C79285 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45D013BC20B0B4F300C79285 /* Style */,
+				450A2DCC20A87B93000352B8 /* Main.storyboard */,
+				45D013BC20B0B4F300C79285 /* ComponentsStyles */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,11 +306,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		45D013BC20B0B4F300C79285 /* Style */ = {
+		45D013BC20B0B4F300C79285 /* ComponentsStyles */ = {
 			isa = PBXGroup;
 			children = (
+				45641BE420C839A700717BEE /* Button.swift */,
 			);
-			path = Style;
+			path = ComponentsStyles;
 			sourceTree = "<group>";
 		};
 		DEB04D6B68125C18749AF08F /* Frameworks */ = {
@@ -658,6 +661,7 @@
 				45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */,
 				45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */,
 				45641BC720C7622500717BEE /* UserDataSourceImpl.swift in Sources */,
+				45641BE520C839A700717BEE /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

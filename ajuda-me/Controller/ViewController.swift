@@ -12,20 +12,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var mainBtn: UIButton!
     
+    @IBOutlet var mapsView: UIView!
+    
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
         UIApplication.shared.open(number)
     }
     
     override func viewDidLoad() {
-        mainBtn.layer.cornerRadius = 20
-        mainBtn.clipsToBounds = true
         
-        print("wow")
+        mainBtn = setMainButtonStyle(btn: mainBtn)
+        GoogleMapsInitializer.generateMap(view: mapsView)
+        
         Caller.get(url: "https://whispering-lowlands-23613.herokuapp.com/locations")
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
