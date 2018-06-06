@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         mainBtn.layer.cornerRadius = 20
         mainBtn.clipsToBounds = true
         
+        print("wow")
         Caller.get(url: "https://whispering-lowlands-23613.herokuapp.com/locations")
         super.viewDidLoad()
         
