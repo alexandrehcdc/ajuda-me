@@ -13,9 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var mainBtn: UIButton!
     
     @IBAction func mainBtnAction(_ sender: Any) {
-        guard let number = URL(string: "tel://10101010") else { return }
+        guard let number = URL(string: "tel://192") else { return }
         UIApplication.shared.open(number)
-
     }
     
     override func viewDidLoad() {
