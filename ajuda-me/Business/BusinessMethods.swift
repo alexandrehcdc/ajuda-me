@@ -10,14 +10,14 @@ import Foundation
 
 public class BusinessMethods {
     
-//    let 
+//    let
     
     func getHelp() {
-        
+        //to do
     }
     
     func getClosestUnit() {
-        
+        //to do
     }
     
 }

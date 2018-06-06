@@ -21,10 +21,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         
+        if mapsView != nil {
+            GoogleMapsInitializer.generateMap(view: mapsView)
+        }
+        
         mainBtn = setMainButtonStyle(btn: mainBtn)
-        GoogleMapsInitializer.generateMap(view: mapsView)
         
         Caller.get(url: "https://whispering-lowlands-23613.herokuapp.com/locations")
+        
         super.viewDidLoad()
     }
     
@@ -46,6 +50,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
         cell.textLabel?.text = "Emergência exemplo"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("here")
     }
     
 }
