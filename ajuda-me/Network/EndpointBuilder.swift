@@ -16,4 +16,7 @@ class EndpointBuilder {
         return self
     }
     
+    func getPath() -> String {
+        return self.BASE_URL
+    }
 }

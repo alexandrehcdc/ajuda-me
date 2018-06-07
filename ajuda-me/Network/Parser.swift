@@ -10,6 +10,5 @@ import Foundation
 import SwiftyJSON
 
 class Parser {
-    
-    
+    //to do
 }

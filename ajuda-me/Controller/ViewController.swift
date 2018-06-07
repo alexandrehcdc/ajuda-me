@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mainBtn: UIButton!
+    @IBOutlet weak var mapsViewObject: UIView!
     
-    @IBOutlet var mapsView: UIView!
+//    @IBOutlet var mapsView: UIView! <-- remover referencia
     
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
@@ -21,13 +23,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         
-        if mapsView != nil {
-            GoogleMapsInitializer.generateMap(view: mapsView)
+        if mapsViewObject != nil {
+            GoogleMapsInitializer.generateMap(view: &mapsViewObject!)
         }
         
-        mainBtn = setMainButtonStyle(btn: mainBtn)
+        if mainBtn != nil {
+            mainBtn = setMainButtonStyle(btn: mainBtn!)
+        }
         
-        Caller.get(url: "https://whispering-lowlands-23613.herokuapp.com/locations")
+//        Caller.get(url: EndpointBuilder
+//                          .withLocation()
+//                          .getPath())
         
         super.viewDidLoad()
     }
@@ -48,12 +54,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
+        
         cell.textLabel?.text = "Emergência exemplo"
         return cell
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("here")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
+        print(cell.textLabel!)
     }
     
 }

@@ -19,7 +19,7 @@ public class Caller {
                           encoding: JSONEncoding.default,
                           headers: nil)
             .responseJSON { (response) in
-//                let formattedResponse = String(utf8String: String(response.data!).cString(using: .utf8)!)
+//                let formattedResponse = String(utf8String: String(response.result.value!).cString(using: .utf8)!)
 //                print(formattedResponse)
                 
             }
