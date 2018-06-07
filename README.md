@@ -1,6 +1,6 @@
 # ajuda-me
 
-App para primeiros socorros, com intuito de englobar a centralizar os serviços de diversas entidades públicas em um só aplicativo.
+App para primeiros socorros, com intuito de englobar a centralizar os serviços de diversas entidades públicas da saúde em um só aplicativo.
 
 ## Instruções e pré-requisitos
 
