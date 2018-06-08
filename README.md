@@ -1,4 +1,10 @@
 # ajuda-me
+> App para primeiros socorros, com intuito de englobar a centralizar os serviços de diversas entidades públicas da saúde em um só aplicativo
+
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat-square)
+![CocoaPods](https://img.shields.io/cocoapods/v/AFNetworking.svg?style=flat-square)
+![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
+
 
 App para primeiros socorros, com intuito de englobar a centralizar os serviços de diversas entidades públicas da saúde em um só aplicativo.
 
