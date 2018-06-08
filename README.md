@@ -5,9 +5,6 @@
 ![CocoaPods](https://img.shields.io/cocoapods/v/AFNetworking.svg?style=flat-square)
 ![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)
 
-
-App para primeiros socorros, com intuito de englobar a centralizar os serviços de diversas entidades públicas da saúde em um só aplicativo.
-
 ## Instruções e pré-requisitos
 
 É necessário ter o [CocoaPods](https://cocoapods.org/) instalado para utilização das bibliotecas utilizadas nesse projeto, seguido dos passos a seguir:
