@@ -10,8 +10,8 @@ import Foundation
 
 public class ServicePoint: BaseModel {
     @objc dynamic var name = ""
-    @objc dynamic var geolocation = ""
+    @objc dynamic var firstCoordinate = ""
+    @objc dynamic var secondCoordinate = ""
     @objc dynamic var address = ""
     @objc dynamic var city = ""
-    @objc dynamic var CEP = ""
 }

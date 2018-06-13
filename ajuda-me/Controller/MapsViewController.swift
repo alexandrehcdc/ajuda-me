@@ -14,6 +14,8 @@ import SwiftyJSON
 class MapsViewController: UIViewController {
     
     let apiKey = "AIzaSyBQR4o1QgKELUJ-gpmpBfDONvfTQJ78jnY"
+    
+    var mapPoints = [ServicePoint]()
 
     @IBOutlet weak var mapsView: UIView!
     
@@ -27,7 +29,6 @@ class MapsViewController: UIViewController {
             .withBases()
             .getPath(),
              markerFactory)
-        
     
         GMSServices.provideAPIKey(apiKey)
         GMSPlacesClient.provideAPIKey(apiKey)
@@ -45,14 +46,6 @@ class MapsViewController: UIViewController {
         marker.title = "Alagoas"
         marker.snippet = "Brasil"
         marker.map = mapView
-        
-        let outroMarker = GMSMarker()
-        outroMarker.position = CLLocationCoordinate2D(latitude: -8.8137, longitude: -36.9541)
-        
-        //Coordenadas de alagoas
-        outroMarker.title = "Pernambuco"
-        outroMarker.snippet = "Brasil"
-        outroMarker.map = mapView
     
     }
 
@@ -61,7 +54,21 @@ class MapsViewController: UIViewController {
     }
     
     func markerFactory(response: JSON) -> Void {
-        //map response 
+//        print(response[0]["geometry"].stringValue)
+        print(response)
+//            print(response[0].stringValue)
+        for (index, obj) in response {
+            
+            let point = ServicePoint()
+            point.name = obj["properties"]["Nome"].stringValue
+            point.firstCoordinate = obj["geometry"]["coordinates"][0].stringValue
+            point.secondCoordinate = obj["geometry"]["coordinates"][1].stringValue
+            point.address = obj["properties"]["Endereço"]
+            point.city = obj["properties"]["Município"]
+            mapPoints.append(point)
+            //            point.name = obj["geometry"]["coordinates"]
+        }
+        
         var marker = GMSMarker()
         marker.title = "Alagoas"
         marker.snippet = "Brasil"
