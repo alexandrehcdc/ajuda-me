@@ -12,19 +12,24 @@ import SwiftyJSON
 
 public class Caller {
     
-    class func get(url: String) {
+    class func get(url: String, _ exec: @escaping (_ response: JSON) -> Void) {
+        
         Alamofire.request(url,
                           method: .get,
                           parameters: nil,
                           encoding: JSONEncoding.default,
                           headers: nil)
             .responseJSON { (response) in
-//                let formattedResponse = String(utf8String: String(response.result.value!).cString(using: .utf8)!)
-//                print(formattedResponse)
+                
+                if let result = response.result.value {
+                    let json = JSON(result)
+                    exec(json)
+                }
                 
             }
             .responseString { (response) in
                 let formattedResponse = String(utf8String: response.result.value!.cString(using: .utf8)!)
+                print(formattedResponse!)
         }
     }
     

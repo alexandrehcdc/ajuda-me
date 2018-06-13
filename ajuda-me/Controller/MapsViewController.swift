@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import SwiftyJSON
 
 class MapsViewController: UIViewController {
     
@@ -21,6 +22,12 @@ class MapsViewController: UIViewController {
     }
     
     override func loadView() {
+        
+        Caller.get(url: EndpointBuilder()
+            .withBases()
+            .getPath(),
+             markerFactory)
+        
     
         GMSServices.provideAPIKey(apiKey)
         GMSPlacesClient.provideAPIKey(apiKey)
@@ -51,7 +58,15 @@ class MapsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
+    }
+    
+    func markerFactory(response: JSON) -> Void {
+        //map response 
+        var marker = GMSMarker()
+        marker.title = "Alagoas"
+        marker.snippet = "Brasil"
+//        return marker
+//        marker.map = mapView
     }
 
 }

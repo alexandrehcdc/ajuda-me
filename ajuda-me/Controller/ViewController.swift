@@ -14,8 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var mainBtn: UIButton!
     @IBOutlet weak var mapsViewObject: UIView!
     
-//    @IBOutlet var mapsView: UIView! <-- remover referencia
-    
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
         UIApplication.shared.open(number)
@@ -26,10 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if mainBtn != nil {
             mainBtn = setMainButtonStyle(btn: mainBtn!)
         }
-        
-//        Caller.get(url: EndpointBuilder
-//                          .withLocation()
-//                          .getPath())
         
         super.viewDidLoad()
     }
