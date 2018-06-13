@@ -25,17 +25,27 @@ class MapsViewController: UIViewController {
         GMSServices.provideAPIKey(apiKey)
         GMSPlacesClient.provideAPIKey(apiKey)
         
-        let camera = GMSCameraPosition.camera(withLatitude: -9.6498, longitude: -35.7089, zoom: 0.0)
+        //Coordenadas de alagoas
+        let camera = GMSCameraPosition.camera(withLatitude: -9.6498, longitude: -35.7089, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         view = mapView
         
         // Creates a marker in the center of the map.
+        
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -9.6498, longitude: -35.7089)
-        //Coordenadas de alagoas
+        
         marker.title = "Alagoas"
         marker.snippet = "Brasil"
         marker.map = mapView
+        
+        let outroMarker = GMSMarker()
+        outroMarker.position = CLLocationCoordinate2D(latitude: -8.8137, longitude: -36.9541)
+        
+        //Coordenadas de alagoas
+        outroMarker.title = "Pernambuco"
+        outroMarker.snippet = "Brasil"
+        outroMarker.map = mapView
     
     }
 

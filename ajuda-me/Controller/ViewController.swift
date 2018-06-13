@@ -23,10 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         
-        if mapsViewObject != nil {
-            GoogleMapsInitializer.generateMap(view: &mapsViewObject!)
-        }
-        
         if mainBtn != nil {
             mainBtn = setMainButtonStyle(btn: mainBtn!)
         }
