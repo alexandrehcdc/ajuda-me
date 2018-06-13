@@ -12,5 +12,5 @@ public class HelpRequest: BaseModel {
     @objc dynamic var callerId = ""
     @objc dynamic var serviceId = ""
     @objc dynamic var callerLocation = ""
-    @objc dynamic var email = ""
+    @objc dynamic var requestId = ""
 }

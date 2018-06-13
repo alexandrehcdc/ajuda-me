@@ -11,6 +11,8 @@ import GoogleMaps
 import GooglePlaces
 
 class MapsViewController: UIViewController {
+    
+    let apiKey = "AIzaSyBQR4o1QgKELUJ-gpmpBfDONvfTQJ78jnY"
 
     @IBOutlet weak var mapsView: UIView!
     
@@ -20,16 +22,16 @@ class MapsViewController: UIViewController {
     
     override func loadView() {
     
-        GMSServices.provideAPIKey(GoogleMapsInitializer.apiKey)
-        GMSPlacesClient.provideAPIKey(GoogleMapsInitializer.apiKey)
+        GMSServices.provideAPIKey(apiKey)
+        GMSPlacesClient.provideAPIKey(apiKey)
         
-        let camera = GMSCameraPosition.camera(withLatitude: 9.6498, longitude: 35.7089, zoom: 0.0)
+        let camera = GMSCameraPosition.camera(withLatitude: -9.6498, longitude: -35.7089, zoom: 0.0)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         view = mapView
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 9.6498, longitude: 35.7089)
+        marker.position = CLLocationCoordinate2D(latitude: -9.6498, longitude: -35.7089)
         //Coordenadas de alagoas
         marker.title = "Alagoas"
         marker.snippet = "Brasil"
