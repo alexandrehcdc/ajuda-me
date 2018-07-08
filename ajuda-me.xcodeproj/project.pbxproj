@@ -17,6 +17,7 @@
 		451E0AEC20C5A35500DE5B04 /* ServicePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */; };
 		451E0AEE20C5A42900DE5B04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AED20C5A42900DE5B04 /* User.swift */; };
 		451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */; };
+		45524A4620F27A8000181C4A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4520F27A8000181C4A /* View.swift */; };
 		45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */; };
 		45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBE20C75E7C00717BEE /* UserDataSource.swift */; };
 		45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */; };
@@ -76,6 +77,7 @@
 		451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePoint.swift; sourceTree = "<group>"; };
 		451E0AED20C5A42900DE5B04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequest.swift; sourceTree = "<group>"; };
+		45524A4520F27A8000181C4A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDataSource.swift; sourceTree = "<group>"; };
 		45641BBE20C75E7C00717BEE /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointDataSource.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				45641BE420C839A700717BEE /* Button.swift */,
+				45524A4520F27A8000181C4A /* View.swift */,
 			);
 			path = ComponentsStyles;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				45641BC920C7623200717BEE /* ServicePointDataSourceImpl.swift in Sources */,
 				45641BDB20C7718C00717BEE /* HelpRequestRemoteDataSourceImpl.swift in Sources */,
 				45641BDD20C7725D00717BEE /* EndpointBuilder.swift in Sources */,
+				45524A4620F27A8000181C4A /* View.swift in Sources */,
 				451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */,
 				45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */,
 				45641BD120C76C1F00717BEE /* Caller.swift in Sources */,

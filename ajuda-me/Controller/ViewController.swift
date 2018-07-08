@@ -11,6 +11,8 @@ import GoogleMaps
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var indicatorsView: UIView!
+    @IBOutlet weak var informationView: UIView!
     @IBOutlet weak var mainBtn: UIButton!
     @IBOutlet weak var mapsViewObject: UIView!
     
@@ -24,6 +26,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if mainBtn != nil {
             mainBtn = setMainButtonStyle(btn: mainBtn!)
         }
+        
+        informationView = setViewUpperRoundCorners(view: informationView)
+        indicatorsView = setViewCardShadows(view: indicatorsView)
         
         super.viewDidLoad()
     }
