@@ -16,6 +16,21 @@ class EndpointBuilder {
         return self
     }
     
+    func withAgent() -> EndpointBuilder {
+        self.BASE_URL = BASE_URL + "/agent"
+        return self
+    }
+    
+    func withAmbulance() -> EndpointBuilder {
+        self.BASE_URL = BASE_URL + "/ambulance"
+        return self
+    }
+    
+    func withBasesCount() -> EndpointBuilder {
+        self.BASE_URL = BASE_URL + "/bases/available"
+        return self
+    }
+    
     func withBases() -> EndpointBuilder {
         self.BASE_URL = BASE_URL + "/bases"
         return self

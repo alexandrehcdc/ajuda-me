@@ -7,28 +7,58 @@
 //
 
 import UIKit
-import GoogleMaps
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var indicatorsView: UIView!
     @IBOutlet weak var informationView: UIView!
     @IBOutlet weak var mainBtn: UIButton!
-    @IBOutlet weak var mapsViewObject: UIView!
+    
+    @IBOutlet weak var unitsAvailableLabel: UILabel!
+    @IBOutlet weak var agentsAvailableLabel: UILabel!
+    @IBOutlet weak var ambulancesAvailableLabel: UILabel!
+    
     
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
         UIApplication.shared.open(number)
     }
     
+    func setUnitsLabel (json: JSON) {
+        self.unitsAvailableLabel.text = String(reflecting: json)
+    }
+    
+    func setAgentsLabel (json: JSON) {
+        self.agentsAvailableLabel.text = String(reflecting: json)
+    }
+    
+    func setAmbulancesLabel (json: JSON) {
+        self.ambulancesAvailableLabel.text = String(reflecting: json)
+    }
+    
     override func viewDidLoad() {
         
-        if mainBtn != nil {
+        if mainBtn != nil &&
+           informationView != nil &&
+           indicatorsView != nil
+            {
             mainBtn = setMainButtonStyle(btn: mainBtn!)
+            informationView = setViewUpperRoundCorners(view: informationView)
+            indicatorsView = setViewCardShadows(view: indicatorsView)
+                
+            Caller.get(url: EndpointBuilder()
+                .withAgent()
+                .getPath(), setAgentsLabel)
+            
+            Caller.get(url: EndpointBuilder()
+                .withBasesCount()
+                .getPath(), setUnitsLabel)
+            
+            Caller.get(url: EndpointBuilder()
+                .withAmbulance()
+                .getPath(), setAmbulancesLabel)
         }
-        
-        informationView = setViewUpperRoundCorners(view: informationView)
-        indicatorsView = setViewCardShadows(view: indicatorsView)
         
         super.viewDidLoad()
     }

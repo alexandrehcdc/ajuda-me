@@ -27,10 +27,6 @@ public class Caller {
                 }
                 
             }
-//            .responseString { (response) in
-//                let formattedResponse = String(utf8String: response.result.value!.cString(using: .utf8)!)
-//                
-//        }
     }
     
 }
