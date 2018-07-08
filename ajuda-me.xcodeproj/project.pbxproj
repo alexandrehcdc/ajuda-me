@@ -18,6 +18,9 @@
 		451E0AEE20C5A42900DE5B04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AED20C5A42900DE5B04 /* User.swift */; };
 		451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */; };
 		45524A4620F27A8000181C4A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4520F27A8000181C4A /* View.swift */; };
+		45524A4820F2C1DB00181C4A /* Occurrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4720F2C1DB00181C4A /* Occurrences.swift */; };
+		45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */; };
+		45524A4C20F2C30700181C4A /* OccurrencesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4B20F2C30700181C4A /* OccurrencesLocalDataSource.swift */; };
 		45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */; };
 		45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBE20C75E7C00717BEE /* UserDataSource.swift */; };
 		45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */; };
@@ -78,6 +81,9 @@
 		451E0AED20C5A42900DE5B04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequest.swift; sourceTree = "<group>"; };
 		45524A4520F27A8000181C4A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		45524A4720F2C1DB00181C4A /* Occurrences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occurrences.swift; sourceTree = "<group>"; };
+		45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesLocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		45524A4B20F2C30700181C4A /* OccurrencesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesLocalDataSource.swift; sourceTree = "<group>"; };
 		45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDataSource.swift; sourceTree = "<group>"; };
 		45641BBE20C75E7C00717BEE /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointDataSource.swift; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 				451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */,
 				451E0AED20C5A42900DE5B04 /* User.swift */,
 				451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */,
+				45524A4720F2C1DB00181C4A /* Occurrences.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 				45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */,
 				45641BBE20C75E7C00717BEE /* UserDataSource.swift */,
 				45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */,
+				45524A4B20F2C30700181C4A /* OccurrencesLocalDataSource.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				45641BC620C7622500717BEE /* UserDataSourceImpl.swift */,
 				45641BC820C7623200717BEE /* ServicePointDataSourceImpl.swift */,
 				45641BCA20C7623F00717BEE /* HelpRequestDataSourceImpl.swift */,
+				45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -645,9 +654,11 @@
 				45641BDB20C7718C00717BEE /* HelpRequestRemoteDataSourceImpl.swift in Sources */,
 				45641BDD20C7725D00717BEE /* EndpointBuilder.swift in Sources */,
 				45524A4620F27A8000181C4A /* View.swift in Sources */,
+				45524A4C20F2C30700181C4A /* OccurrencesLocalDataSource.swift in Sources */,
 				451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */,
 				45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */,
 				45641BD120C76C1F00717BEE /* Caller.swift in Sources */,
+				45524A4820F2C1DB00181C4A /* Occurrences.swift in Sources */,
 				45641BCF20C762D600717BEE /* BaseDataSource.swift in Sources */,
 				45641BD320C770BE00717BEE /* Parser.swift in Sources */,
 				45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */,
@@ -658,6 +669,7 @@
 				45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */,
 				45641BC720C7622500717BEE /* UserDataSourceImpl.swift in Sources */,
 				45641BE520C839A700717BEE /* Button.swift in Sources */,
+				45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
