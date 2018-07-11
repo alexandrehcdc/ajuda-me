@@ -21,6 +21,8 @@
 		45524A4820F2C1DB00181C4A /* Occurrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4720F2C1DB00181C4A /* Occurrences.swift */; };
 		45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */; };
 		45524A4C20F2C30700181C4A /* OccurrencesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4B20F2C30700181C4A /* OccurrencesLocalDataSource.swift */; };
+		45524A4F20F2E27800181C4A /* OccurrenceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4E20F2E27800181C4A /* OccurrenceBuilder.swift */; };
+		45524A5320F48B5300181C4A /* OccurrenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A5220F48B5300181C4A /* OccurrenceDetailViewController.swift */; };
 		45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */; };
 		45641BBF20C75E7C00717BEE /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BBE20C75E7C00717BEE /* UserDataSource.swift */; };
 		45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */; };
@@ -84,6 +86,8 @@
 		45524A4720F2C1DB00181C4A /* Occurrences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occurrences.swift; sourceTree = "<group>"; };
 		45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		45524A4B20F2C30700181C4A /* OccurrencesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesLocalDataSource.swift; sourceTree = "<group>"; };
+		45524A4E20F2E27800181C4A /* OccurrenceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceBuilder.swift; sourceTree = "<group>"; };
+		45524A5220F48B5300181C4A /* OccurrenceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceDetailViewController.swift; sourceTree = "<group>"; };
 		45641BBC20C75E7300717BEE /* HelpRequestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequestDataSource.swift; sourceTree = "<group>"; };
 		45641BBE20C75E7C00717BEE /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		45641BC020C75E9F00717BEE /* ServicePointDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointDataSource.swift; sourceTree = "<group>"; };
@@ -193,6 +197,14 @@
 			path = "ajuda-meUITests";
 			sourceTree = "<group>";
 		};
+		45524A4D20F2E26100181C4A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				45524A4E20F2E27800181C4A /* OccurrenceBuilder.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		45641BBA20C75DFE00717BEE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +257,7 @@
 		45641BD420C7710200717BEE /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				45524A4D20F2E26100181C4A /* Global */,
 				45641BC220C75ECD00717BEE /* Inheritable */,
 				45641BC620C7622500717BEE /* UserDataSourceImpl.swift */,
 				45641BC820C7623200717BEE /* ServicePointDataSourceImpl.swift */,
@@ -305,6 +318,7 @@
 			children = (
 				450A2DCA20A87B93000352B8 /* ViewController.swift */,
 				45A7A39D20C8A38200217E81 /* MapsViewController.swift */,
+				45524A5220F48B5300181C4A /* OccurrenceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -646,6 +660,7 @@
 			files = (
 				45641BC520C75F0700717BEE /* BaseModel.swift in Sources */,
 				45641BD720C7716500717BEE /* UserRemoteDataSourceImpl.swift in Sources */,
+				45524A4F20F2E27800181C4A /* OccurrenceBuilder.swift in Sources */,
 				45641BCB20C7623F00717BEE /* HelpRequestDataSourceImpl.swift in Sources */,
 				451E0AEE20C5A42900DE5B04 /* User.swift in Sources */,
 				450A2DCB20A87B93000352B8 /* ViewController.swift in Sources */,
@@ -669,6 +684,7 @@
 				45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */,
 				45641BC720C7622500717BEE /* UserDataSourceImpl.swift in Sources */,
 				45641BE520C839A700717BEE /* Button.swift in Sources */,
+				45524A5320F48B5300181C4A /* OccurrenceDetailViewController.swift in Sources */,
 				45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

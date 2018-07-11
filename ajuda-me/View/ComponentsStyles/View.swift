@@ -16,6 +16,13 @@ public func setViewUpperRoundCorners (view: UIView) -> UIView {
     return view
 }
 
+public func setViewUpperRoundCorners (view: UITextView) -> UITextView {
+    view.clipsToBounds = true
+    view.layer.cornerRadius = 10
+    view.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+    return view
+}
+
 public func setViewCardShadows (view: UIView) -> UIView {
     view.layer.cornerRadius = 5.0
     view.layer.borderColor  =  UIColor.lightGray.cgColor

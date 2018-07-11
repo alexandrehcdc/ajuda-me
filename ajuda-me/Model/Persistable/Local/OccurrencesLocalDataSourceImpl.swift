@@ -62,4 +62,16 @@ public class OccurrencesLocalDataSourceImpl : OccurrencesLocalDataSource {
         return entity
     }
     
+    public func saveMany(entities: [Occurrence]) -> [Occurrence] {
+        for entity in entities {
+            do {
+                try realm.write {
+                    realm.add(entity, update: true)
+                }
+            } catch {}
+        }
+        
+        return entities
+    }
+    
 }
