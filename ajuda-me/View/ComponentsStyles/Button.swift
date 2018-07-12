@@ -14,3 +14,9 @@ public func setMainButtonStyle (btn: UIButton) -> UIButton {
     btn.clipsToBounds = true
     return btn
 }
+
+public func setLowerButtonStyle (btn: UIButton) -> UIButton {
+    btn.layer.cornerRadius = 15
+    btn.clipsToBounds = true
+    return btn
+}

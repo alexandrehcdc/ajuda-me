@@ -40,6 +40,8 @@
 		45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE220C7801400717BEE /* BusinessMethods.swift */; };
 		45641BE520C839A700717BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE420C839A700717BEE /* Button.swift */; };
 		45A7A39E20C8A38200217E81 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7A39D20C8A38200217E81 /* MapsViewController.swift */; };
+		45FD752C20F734270008FD73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD752B20F734270008FD73 /* HistoryViewController.swift */; };
+		45FD752E20F734970008FD73 /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD752D20F734970008FD73 /* IndicatorsViewController.swift */; };
 		64D7A788CA770CACF4001B9B /* Pods_ajuda_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6413591F2360BD4FE20AEC /* Pods_ajuda_me.framework */; };
 		778D678B1B5850C8D513F730 /* Pods_ajuda_meTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283EABBAA2F060F02DD36A34 /* Pods_ajuda_meTests.framework */; };
 		AE5A2D5DF6C19BF175708CA8 /* Pods_ajuda_meUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10AB6D3FE15E08C1F46B580 /* Pods_ajuda_meUITests.framework */; };
@@ -105,6 +107,8 @@
 		45641BE220C7801400717BEE /* BusinessMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMethods.swift; sourceTree = "<group>"; };
 		45641BE420C839A700717BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		45A7A39D20C8A38200217E81 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		45FD752B20F734270008FD73 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		45FD752D20F734970008FD73 /* IndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsViewController.swift; sourceTree = "<group>"; };
 		4C9EC77223624A27D169B0B0 /* Pods-ajuda-meTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-meTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-meTests/Pods-ajuda-meTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66AD172892B3CA74D8126538 /* Pods-ajuda-me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B6CE8C7A40D9E98D8A64BC /* Pods-ajuda-me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajuda-me.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajuda-me/Pods-ajuda-me.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,6 +323,8 @@
 				450A2DCA20A87B93000352B8 /* ViewController.swift */,
 				45A7A39D20C8A38200217E81 /* MapsViewController.swift */,
 				45524A5220F48B5300181C4A /* OccurrenceDetailViewController.swift */,
+				45FD752B20F734270008FD73 /* HistoryViewController.swift */,
+				45FD752D20F734970008FD73 /* IndicatorsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -658,9 +664,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FD752C20F734270008FD73 /* HistoryViewController.swift in Sources */,
 				45641BC520C75F0700717BEE /* BaseModel.swift in Sources */,
 				45641BD720C7716500717BEE /* UserRemoteDataSourceImpl.swift in Sources */,
 				45524A4F20F2E27800181C4A /* OccurrenceBuilder.swift in Sources */,
+				45FD752E20F734970008FD73 /* IndicatorsViewController.swift in Sources */,
 				45641BCB20C7623F00717BEE /* HelpRequestDataSourceImpl.swift in Sources */,
 				451E0AEE20C5A42900DE5B04 /* User.swift in Sources */,
 				450A2DCB20A87B93000352B8 /* ViewController.swift in Sources */,

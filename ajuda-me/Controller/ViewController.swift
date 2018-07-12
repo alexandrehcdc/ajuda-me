@@ -28,6 +28,7 @@ class ViewController: UIViewController,
     @IBOutlet weak var profileBtn: UIButton!
     
     
+    
     // labels
     @IBOutlet weak var unitsAvailableLabel: UILabel!
     @IBOutlet weak var agentsAvailableLabel: UILabel!
@@ -45,6 +46,15 @@ class ViewController: UIViewController,
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
         UIApplication.shared.open(number)
+    }
+    
+    @IBAction func historyClick(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "historyView") as! HistoryViewController
+        present(vc, animated: true, completion: nil)
+    }
+    @IBAction func openDataClick(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "indicatorsView") as! IndicatorsViewController
+        present(vc, animated: true, completion: nil)
     }
     
     func setUnitsLabel (json: JSON) {
@@ -65,12 +75,16 @@ class ViewController: UIViewController,
         
         if mainBtn != nil {
             
-            mainBtn = setMainButtonStyle(btn: mainBtn!)
+            mainBtn     = setMainButtonStyle(btn: mainBtn!)
+            historyBtn  = setLowerButtonStyle(btn: historyBtn!)
+            openDataBtn = setLowerButtonStyle(btn: openDataBtn!)
+            profileBtn  = setLowerButtonStyle(btn: profileBtn!)
+            
             informationView = setViewUpperRoundCorners(view: informationView)
             
-            indicatorsView = setViewCardShadows(view: indicatorsView)
-            indicatorsView = setViewAsCard(view: indicatorsView)
-            indicatorsView = setViewSimpleShadow(view: indicatorsView, color: UIColor.black.cgColor)
+            indicatorsView  = setViewCardShadows(view: indicatorsView)
+            indicatorsView  = setViewAsCard(view: indicatorsView)
+            indicatorsView  = setViewSimpleShadow(view: indicatorsView, color: UIColor.black.cgColor)
                 
             Caller.get(url: EndpointBuilder()
                 .withAgent()
