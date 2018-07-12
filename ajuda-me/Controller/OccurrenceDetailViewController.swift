@@ -11,31 +11,40 @@ import UIKit
 class OccurrenceDetailViewController: UIViewController {
     
     var detailText = ""
+    var mainViewController: ViewController?
 
     @IBOutlet weak var detailsTxtView: UITextView!
+    
+    // helpCallGroup
+    @IBOutlet weak var helpCallGroupView: UIView!
+    @IBOutlet weak var helpCallVehicleView: UIView!
+    @IBOutlet weak var helpCallAgentView: UIView!
+    @IBOutlet weak var helpCallEntityView: UIView!
+    @IBOutlet weak var helpCallStatusView: UIView!
+    @IBOutlet weak var vehiclePic: UIImageView!
+    @IBOutlet weak var agentPic: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailsTxtView = setViewUpperRoundCorners(view: detailsTxtView)
+        detailsTxtView = setViewAsCard(view: detailsTxtView)
         detailsTxtView.text = detailText
-        print(" marreco \(detailText) ")
-        // Do any additional setup after loading the view.
+
+        helpCallGroupView = setViewAsCard(view: helpCallGroupView)
+        helpCallGroupView = setViewSimpleShadow(view: helpCallGroupView, color: UIColor.black.cgColor)
+        
+        helpCallVehicleView = setViewAsCard(view: helpCallVehicleView)
+        helpCallAgentView = setViewAsCard(view: helpCallAgentView)
+        helpCallEntityView = setViewAsCard(view: helpCallEntityView)
+        helpCallStatusView = setViewAsCard(view: helpCallStatusView)
+        
+        vehiclePic = setProfilePictureStyle(image: vehiclePic)
+        agentPic = setProfilePictureStyle(image: agentPic)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

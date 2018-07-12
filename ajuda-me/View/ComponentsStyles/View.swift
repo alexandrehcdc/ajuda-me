@@ -16,6 +16,26 @@ public func setViewUpperRoundCorners (view: UIView) -> UIView {
     return view
 }
 
+public func setViewAsCard (view: UIView) -> UIView {
+    view.clipsToBounds = true
+    view.layer.cornerRadius = 10
+    view.layer.maskedCorners = [.layerMinXMinYCorner,
+                                .layerMaxXMinYCorner,
+                                .layerMinXMaxYCorner,
+                                .layerMaxXMaxYCorner]
+    return view
+}
+
+public func setViewAsCard (view: UITextView) -> UITextView {
+    view.clipsToBounds = true
+    view.layer.cornerRadius = 10
+    view.layer.maskedCorners = [.layerMinXMinYCorner,
+                                .layerMaxXMinYCorner,
+                                .layerMinXMaxYCorner,
+                                .layerMaxXMaxYCorner]
+    return view
+}
+
 public func setViewUpperRoundCorners (view: UITextView) -> UITextView {
     view.clipsToBounds = true
     view.layer.cornerRadius = 10
@@ -33,5 +53,23 @@ public func setViewCardShadows (view: UIView) -> UIView {
     view.layer.shadowOffset = CGSize(width:5, height: 5)
     view.layer.masksToBounds = true
     view.backgroundColor = UIColor.white
+    return view
+}
+
+public func setProfilePictureStyle (image: UIImageView) -> UIImageView {
+    image.layer.masksToBounds = false
+    image.layer.cornerRadius = image.frame.height/2
+    image.clipsToBounds = true
+    return image
+}
+
+public func setViewSimpleShadow(view: UIView, color: CGColor, opacity: Float = 0.5) -> UIView {
+    view.layer.borderColor  =  color
+    view.layer.borderWidth = 0.5
+    view.layer.shadowOpacity = opacity
+    view.layer.shadowColor =  color
+    view.layer.shadowRadius = 5.0
+    view.layer.shadowOffset = CGSize(width:5, height: 5)
+    view.layer.masksToBounds = true
     return view
 }

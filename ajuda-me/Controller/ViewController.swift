@@ -20,7 +20,13 @@ class ViewController: UIViewController,
     // views
     @IBOutlet weak var indicatorsView: UIView!
     @IBOutlet weak var informationView: UIView!
+    
+    // buttons
     @IBOutlet weak var mainBtn: UIButton!
+    @IBOutlet weak var historyBtn: UIButton!
+    @IBOutlet weak var openDataBtn: UIButton!
+    @IBOutlet weak var profileBtn: UIButton!
+    
     
     // labels
     @IBOutlet weak var unitsAvailableLabel: UILabel!
@@ -29,6 +35,7 @@ class ViewController: UIViewController,
     
     // variables
     var detailTxt: String?
+    var screenId: String?
     
     let occurencesDataSource = OccurrencesLocalDataSourceImpl.getInstance(realm: try! Realm())
     var occurencesOptions = [Occurrence]()
@@ -60,7 +67,10 @@ class ViewController: UIViewController,
             
             mainBtn = setMainButtonStyle(btn: mainBtn!)
             informationView = setViewUpperRoundCorners(view: informationView)
+            
             indicatorsView = setViewCardShadows(view: indicatorsView)
+            indicatorsView = setViewAsCard(view: indicatorsView)
+            indicatorsView = setViewSimpleShadow(view: indicatorsView, color: UIColor.black.cgColor)
                 
             Caller.get(url: EndpointBuilder()
                 .withAgent()
@@ -87,7 +97,7 @@ class ViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+        screenId = "occurrence"
         return "Tipos de emergência"
     }
     
@@ -106,21 +116,17 @@ class ViewController: UIViewController,
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let currentCell = tableView.cellForRow(at: indexPath)
         detailTxt = currentCell?.textLabel?.text
 
-        
-        performSegue(withIdentifier: "teste", sender: (currentCell?.textLabel?.text!)!)
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == "teste" {
+        if segue.identifier == "teste" && screenId == "occurrence" {
             let vc = segue.destination as? OccurrenceDetailViewController
-//            var detailTxt = sender as? String
-            vc?.detailText = detailTxt
+            var detailTxt = sender as? String
+            vc?.detailText = "Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis, nisi eros vermeio. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis."
         }
             /*.destination is OccurrenceDetailViewController {r
             let vc = segue.destination as? OccurrenceDetailViewController
