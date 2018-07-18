@@ -16,6 +16,11 @@ class EndpointBuilder {
         return self
     }
     
+    func withHelpCall() -> EndpointBuilder {
+        self.BASE_URL = BASE_URL + "/helpCall"
+        return self
+    }
+    
     func withAgent() -> EndpointBuilder {
         self.BASE_URL = BASE_URL + "/agent"
         return self

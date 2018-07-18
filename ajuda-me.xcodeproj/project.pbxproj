@@ -17,6 +17,7 @@
 		451E0AEC20C5A35500DE5B04 /* ServicePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */; };
 		451E0AEE20C5A42900DE5B04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AED20C5A42900DE5B04 /* User.swift */; };
 		451E0AF020C5A48D00DE5B04 /* HelpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */; };
+		4531C57320FF255100F0A503 /* HelpCallsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4531C57220FF255100F0A503 /* HelpCallsLoader.swift */; };
 		45524A4620F27A8000181C4A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4520F27A8000181C4A /* View.swift */; };
 		45524A4820F2C1DB00181C4A /* Occurrences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4720F2C1DB00181C4A /* Occurrences.swift */; };
 		45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */; };
@@ -39,6 +40,7 @@
 		45641BDD20C7725D00717BEE /* EndpointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BDC20C7725D00717BEE /* EndpointBuilder.swift */; };
 		45641BE320C7801400717BEE /* BusinessMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE220C7801400717BEE /* BusinessMethods.swift */; };
 		45641BE520C839A700717BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45641BE420C839A700717BEE /* Button.swift */; };
+		4587A14120F7FE00002F5F42 /* ServicePointLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587A14020F7FE00002F5F42 /* ServicePointLoader.swift */; };
 		45A7A39E20C8A38200217E81 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7A39D20C8A38200217E81 /* MapsViewController.swift */; };
 		45FD752C20F734270008FD73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD752B20F734270008FD73 /* HistoryViewController.swift */; };
 		45FD752E20F734970008FD73 /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD752D20F734970008FD73 /* IndicatorsViewController.swift */; };
@@ -84,6 +86,7 @@
 		451E0AEB20C5A35500DE5B04 /* ServicePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePoint.swift; sourceTree = "<group>"; };
 		451E0AED20C5A42900DE5B04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		451E0AEF20C5A48D00DE5B04 /* HelpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRequest.swift; sourceTree = "<group>"; };
+		4531C57220FF255100F0A503 /* HelpCallsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCallsLoader.swift; sourceTree = "<group>"; };
 		45524A4520F27A8000181C4A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		45524A4720F2C1DB00181C4A /* Occurrences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occurrences.swift; sourceTree = "<group>"; };
 		45524A4920F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		45641BDC20C7725D00717BEE /* EndpointBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointBuilder.swift; sourceTree = "<group>"; };
 		45641BE220C7801400717BEE /* BusinessMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMethods.swift; sourceTree = "<group>"; };
 		45641BE420C839A700717BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		4587A14020F7FE00002F5F42 /* ServicePointLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePointLoader.swift; sourceTree = "<group>"; };
 		45A7A39D20C8A38200217E81 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		45FD752B20F734270008FD73 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		45FD752D20F734970008FD73 /* IndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +293,15 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
+		4587A14220F80C36002F5F42 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				4587A14020F7FE00002F5F42 /* ServicePointLoader.swift */,
+				4531C57220FF255100F0A503 /* HelpCallsLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		45D013B820B0ADB400C79285 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +314,7 @@
 		45D013B920B0ADBA00C79285 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4587A14220F80C36002F5F42 /* Loader */,
 				45641BD020C76C1F00717BEE /* Caller.swift */,
 				45641BD220C770BE00717BEE /* Parser.swift */,
 				45641BDC20C7725D00717BEE /* EndpointBuilder.swift */,
@@ -685,6 +699,7 @@
 				45641BCF20C762D600717BEE /* BaseDataSource.swift in Sources */,
 				45641BD320C770BE00717BEE /* Parser.swift in Sources */,
 				45641BC120C75E9F00717BEE /* ServicePointDataSource.swift in Sources */,
+				4587A14120F7FE00002F5F42 /* ServicePointLoader.swift in Sources */,
 				45641BD920C7717200717BEE /* ServicePointRemoteDataSourceImpl.swift in Sources */,
 				451E0AEC20C5A35500DE5B04 /* ServicePoint.swift in Sources */,
 				45641BBD20C75E7300717BEE /* HelpRequestDataSource.swift in Sources */,
@@ -694,6 +709,7 @@
 				45641BE520C839A700717BEE /* Button.swift in Sources */,
 				45524A5320F48B5300181C4A /* OccurrenceDetailViewController.swift in Sources */,
 				45524A4A20F2C2DE00181C4A /* OccurrencesLocalDataSourceImpl.swift in Sources */,
+				4531C57320FF255100F0A503 /* HelpCallsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
