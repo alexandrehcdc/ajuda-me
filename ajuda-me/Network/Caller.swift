@@ -29,4 +29,25 @@ public class Caller {
             }
     }
     
+    class func post(url: String, parameters: [String: Any], _ exec: @escaping (_ response: JSON) -> Void) {
+        print("dentro")
+        Alamofire
+            .request(url,
+                     method: .post,
+                     parameters: parameters, encoding: JSONEncoding.default,
+                     headers: nil)
+//            .responseJSON { response in
+//                if let result = response.result.value {
+//                    let json = JSON(result)
+//                    exec(json)
+//                    print("json?", json)
+//                }
+//                print(response.error)
+//            }
+            .responseString { response in
+                print(response)
+            }
+        
+    }
+    
 }

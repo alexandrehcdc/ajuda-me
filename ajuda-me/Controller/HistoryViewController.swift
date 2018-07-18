@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HistoryViewController: UIViewController,
                              UITableViewDataSource,
                              UITableViewDelegate {
     
+    var allOccurrences = [HelpRequest]()
+    let realm = try! Realm()
+    var helpCallsDataSource : HelpRequestDataSourceImpl?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        helpCallsDataSource = HelpRequestDataSourceImpl.getInstance(realm: realm)
+        
+        allOccurrences = (helpCallsDataSource?.findAll())!
         // Do any additional setup after loading the view.
     }
 
@@ -24,14 +32,13 @@ class HistoryViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 26
+        return allOccurrences.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlainCell", for: indexPath)
         
-        cell.textLabel?.text = "Histórico do usuário"
-        
+        cell.textLabel?.text = "Chamado de \(allOccurrences[indexPath.row].timestamp)"
         
         return cell
     }

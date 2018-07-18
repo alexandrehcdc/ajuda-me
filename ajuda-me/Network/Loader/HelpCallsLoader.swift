@@ -30,6 +30,7 @@ public class HelpCallsLoader {
             helpRequest.id               = obj["_id"].stringValue
             helpRequest.callerId         = obj["userId"].stringValue
             helpRequest.serviceId        = obj["serviceId"].stringValue
+            helpRequest.timestamp        = obj["timestamp"].stringValue
             helpRequest.callerLocation   = String("\(obj["geometry"]["coordinates"][0].stringValue)/\(obj["geometry"]["coordinates"][1].stringValue)")
             
             helpRequestDataSource.save(entity: helpRequest)
@@ -39,7 +40,6 @@ public class HelpCallsLoader {
     }
     
     public func LoadMapPoints() {
-        print("oh god why")
         let teste = EndpointBuilder()
             .withHelpCall()
             .getPath()

@@ -102,6 +102,17 @@ class ViewController: UIViewController,
             Caller.get(url: EndpointBuilder()
                 .withAmbulance()
                 .getPath(), setAmbulancesLabel)
+            
+            let parameters: [String: Any] = [
+                "IdQuiz" : 102,
+                "IdUser" : "iosclient"
+            ]
+            
+            func ue(val: JSON) {
+                print("funfou \(val)")
+            }
+            
+            Caller.post(url: "https://whispering-lowlands-23613.herokuapp.com/teste", parameters: parameters, ue)
         }
         
         super.viewDidLoad()
@@ -141,7 +152,24 @@ class ViewController: UIViewController,
         if segue.identifier == "teste" && screenId == "occurrence" {
             let vc = segue.destination as? OccurrenceDetailViewController
             var detailTxt = sender as? String
-            vc?.detailText = "Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis, nisi eros vermeio. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis."
+            vc?.detailText = """
+            Sempre que possível devemos pedir e aceitar a colaboração de outras pessoas, sempre deixando que o indivíduo com maior conhecimento e experiência possa liderar, dando espaço para que o mesmo demonstre à cada uma, com calma e firmeza o que deve ser feito, de forma rápida, correta e precisa.
+            
+            Segundo o Art. 135 do Código Penal Brasileiro, deixar de prestar socorro à vítima de acidentes ou pessoas em perigo eminente, podendo fazê-lo, é crime, mesmo que a pessoa não seja a causadora do evento.
+            
+            
+            Atitudes corretas:
+            
+            1) A calma, o bom-senso e o discernimento são elementos primordiais neste tipo de atendimento.
+            
+            2) Agir rapidamente, porém respeitando os seus limites e o dos outros.
+            
+            3) Transmitir á(s) vítima(s), tranqüilidade, alívio, confiança e segurança, e quando estiverem conscientes informar-lhes que o atendimento especializado está a caminho.
+            
+            4) Utilize-se de conhecimentos básicos de primeiros socorros, improvisando se necessário.
+            
+            5)Nunca tome atitudes das quais não tem conhecimento, no intuito de ajudar, apenas auxilie dentro de sua capacidade.
+            """
         }
 
     }
