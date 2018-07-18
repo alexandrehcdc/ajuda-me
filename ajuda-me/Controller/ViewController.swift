@@ -18,30 +18,30 @@ class ViewController: UIViewController,
                       CLLocationManagerDelegate {
     
     // views
-    @IBOutlet weak var indicatorsView: UIView!
+    @IBOutlet weak var indicatorsView:  UIView!
     @IBOutlet weak var informationView: UIView!
     
     // buttons
-    @IBOutlet weak var mainBtn: UIButton!
-    @IBOutlet weak var historyBtn: UIButton!
+    @IBOutlet weak var mainBtn:     UIButton!
+    @IBOutlet weak var historyBtn:  UIButton!
     @IBOutlet weak var openDataBtn: UIButton!
-    @IBOutlet weak var profileBtn: UIButton!
+    @IBOutlet weak var profileBtn:  UIButton!
     
     
     
     // labels
-    @IBOutlet weak var unitsAvailableLabel: UILabel!
-    @IBOutlet weak var agentsAvailableLabel: UILabel!
+    @IBOutlet weak var unitsAvailableLabel:      UILabel!
+    @IBOutlet weak var agentsAvailableLabel:     UILabel!
     @IBOutlet weak var ambulancesAvailableLabel: UILabel!
     
     // variables
     var detailTxt: String?
-    var screenId: String?
+    var screenId:  String?
     
     let occurencesDataSource = OccurrencesLocalDataSourceImpl.getInstance(realm: try! Realm())
-    var occurencesOptions = [Occurrence]()
-    let occurrences = getOccurenceList()
-    let userLocation = CLLocationManager()
+    var occurencesOptions    = [Occurrence]()
+    let occurrences          = getOccurenceList()
+    let userLocation         = CLLocationManager()
     
     @IBAction func mainBtnAction(_ sender: Any) {
         guard let number = URL(string: "tel://192") else { return }
@@ -71,6 +71,11 @@ class ViewController: UIViewController,
     
     override func viewDidLoad() {
         
+        let sploader = ServicePointLoader()
+        let hcloader = HelpCallsLoader()
+        hcloader.LoadMapPoints()
+        sploader.LoadMapPoints()
+        
         self.occurencesOptions = occurencesDataSource.findAll()
         
         if mainBtn != nil {
@@ -81,10 +86,10 @@ class ViewController: UIViewController,
             profileBtn  = setLowerButtonStyle(btn: profileBtn!)
             
             informationView = setViewUpperRoundCorners(view: informationView)
-            
             indicatorsView  = setViewCardShadows(view: indicatorsView)
             indicatorsView  = setViewAsCard(view: indicatorsView)
-            indicatorsView  = setViewSimpleShadow(view: indicatorsView, color: UIColor.black.cgColor)
+            indicatorsView  = setViewSimpleShadow(view: indicatorsView,
+                                                  color: UIColor.black.cgColor)
                 
             Caller.get(url: EndpointBuilder()
                 .withAgent()
@@ -97,10 +102,6 @@ class ViewController: UIViewController,
             Caller.get(url: EndpointBuilder()
                 .withAmbulance()
                 .getPath(), setAmbulancesLabel)
-        }
-        
-        if self.occurencesOptions.count == 0 {
-//            self.occurencesOptions = occurencesDataSource.saveMany(entities: <#T##[Occurrence]#>)
         }
         
         super.viewDidLoad()
@@ -142,10 +143,6 @@ class ViewController: UIViewController,
             var detailTxt = sender as? String
             vc?.detailText = "Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis, nisi eros vermeio. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis."
         }
-            /*.destination is OccurrenceDetailViewController {r
-            let vc = segue.destination as? OccurrenceDetailViewController
-            vc?.detailsTxtView.text = self.detailTxt
-        }*/
 
     }
     

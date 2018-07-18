@@ -12,6 +12,7 @@ public class ServicePoint: BaseModel {
     @objc dynamic var name = ""
     @objc dynamic var firstCoordinate = ""
     @objc dynamic var secondCoordinate = ""
+    @objc dynamic var thirdCoordinate = ""
     @objc dynamic var address = ""
     @objc dynamic var city = ""
 }

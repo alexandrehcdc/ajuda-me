@@ -17,4 +17,7 @@ public class BaseModel: Object {
         return self.id
     }
     
+    override public static func primaryKey() -> String? {
+        return "id"
+    }
 }
